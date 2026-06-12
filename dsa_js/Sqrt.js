@@ -1,4 +1,3 @@
-//Bruteforce method
 function sqrt(x) {
   if (x < 0) {
     console.log(NaN);
@@ -10,14 +9,14 @@ function sqrt(x) {
   let result = 0;
 
   while (left <= right) {
-    let m = Math.floor(left + (right - left) / 2);
-    if (Math.pow(m, 2) > x) {
-      right = m - 1;
-    } else if (Math.pow(m, 2) < x) {
-      left = m + 1;
-      result = m;
+    let middle = Math.floor(left + (right - left) / 2);
+    if (Math.pow(middle, 2) > x) {
+      right = middle - 1;
+    } else if (Math.pow(middle, 2) < x) {
+      left = middle + 1;
+      result = middle;
     } else {
-      console.log(m);
+      console.log(middle);
       return true;
     }
   }
